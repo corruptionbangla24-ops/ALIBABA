@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 });
 
 // 🎰 [উইনগো কালার ট্রেড ওরিজিনাল ডোমেইন সিঙ্ক ভাই ভাই]
-const MAIN_SITE_URL = "https://onrender.com"; 
+const MAIN_SITE_URL = "https://betlover247.onrender.com"; 
 
 // 👑 ওরিজিনাল আলিবাবা ৫টি লাক্সারি ক্যাসিনো সিম্বল ম্যাপ
 const alibabaSymbolsPool = ["CROWN", "COIN", "SWORD", "RING", "CHEST"];
@@ -195,5 +195,5 @@ app.get('/', (req, res) => { res.sendFile(path.resolve(__dirname, 'index.html'))
 io.on('connection', (socket) => {});
 
 // ⚡ কাস্টম নোড সার্ভার পোর্ট গেটওয়ে লাইভ অন ফায়ার (৪০০০০ পোর্টে ডেডিকেটেড সিঙ্ক লক!)
-const PORT = process.env.PORT || 40000; 
+const PORT = process.env.PORT || 6100; 
 server.listen(PORT, () => { console.log(`💎 Alibaba Arabian Treasure Slots Engine Running on port ${PORT}`); });
