@@ -1,1 +1,330 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ALIBABA - ROYAL 5-REEL DESERT SLOTS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🎨 লাইভ ক্যাসিনো ৫-রিল স্লট টেবিল সিএসএস ফ্রেম ইনজেকশন ভাই ভাই */
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #05070c; font-family: 'Segoe UI', Roboto, sans-serif; color: #fff; -webkit-tap-highlight-color: transparent; user-select: none; }
+        .header { display: none !important; } 
+        
+        body { 
+            background: radial-gradient(circle at center, #181c26 0%, #04060a 100%); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            height: 100vh; 
+        }
+
+        /* 🏟️ ওরিজিনাল ৫-রিল স্লট মেশিন এরিনা ক্যানভাস Wrapper */
+        .slot-machine-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            height: 310px;
+            margin: 15px auto 0 auto;
+            background: linear-gradient(180deg, #101524 0%, #06090e 100%);
+            border: 4px solid #ffcc00;
+            border-radius: 24px;
+            box-shadow: 0 0 30px rgba(255,204,0,0.25), inset 0 0 25px rgba(0,0,0,0.9);
+            padding: 15px 12px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        /* 🎰 ৫টি রিল কলাম গ্রিড লেআউট চ্যাম */
+        .reels-grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .reel-column-node {
+            background: #080c14;
+            border: 2px solid #1c263d;
+            border-radius: 12px;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.9);
+        }
+
+        /* 👑 রিলসের ভেতরের ওরিজিনাল নিওন সিম্বল ইমেজ নোড */
+        .symbol-img-frame {
+            width: 85%;
+            height: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s ease-out;
+        }
+        .symbol-img-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.85));
+        }
+
+        /* 🔴 মাঝখানের ওরিজিনাল লাল পে-লাইন লেজার বর্ম */
+        .payline-center-laser-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff3366;
+            box-shadow: 0 0 12px #ff3366, 0 0 24px #ff3366;
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0.75;
+        }
+
+        /* 🌀 স্পিনিং ব্লার অ্যানিমেশন ইফেক্ট */
+        .reel-spinning-blur {
+            animation: reelSpinBlurAnim 0.1s linear infinite;
+        }
+        @keyframes reelSpinBlurAnim {
+            0% { transform: translateY(-40px) scaleY(1.25); filter: blur(4px); }
+            100% { transform: translateY(40px) scaleY(1.25); filter: blur(4px); }
+        }
+
+        /* 📢 লাইভ মেসেজ প্যানেল বার */
+        .win-status-container { position: relative; z-index: 10; text-align: center; padding: 10px; margin: 4px 12px; background: rgba(9, 12, 18, 0.6); border-radius: 10px; border: 1px solid rgba(255,255,255,0.02); }
+        #win-text-msg { font-size: 12px; font-weight: 700; color: #38bdf8; letter-spacing: 0.3px; }
+
+        /* 🎛️ নিচের মেইন গেম কন্ট্রোল প্যানেল ফুটার (১৫ পিক্সেল ওপরে লিফটিং সুপ্রিম লক) */
+        .footer-controls { position: relative; z-index: 50; background: #07090e; border-top: 1px solid #161b29; padding: 20px 15px 50px 15px; box-shadow: 0 -8px 25px rgba(0,0,0,0.7); }
+        .play-section { display: flex; justify-content: space-between; align-items: center; gap: 10px; max-width: 450px; margin: 0 auto; margin-bottom: 25px; }
+        .bet-btn-nav { background: #111522; border: 1px solid #20293d; color: #ffbb00; font-size: 18px; font-weight: 800; width: 40px; height: 40px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .play-btn { flex: 1; background: linear-gradient(180deg, #ffbb00 0%, #d48800 100%); color: #000; font-size: 16px; font-weight: 900; border: none; padding: 12px 0; border-radius: 10px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(212,136,0,0.3); }
+        .play-btn:disabled { background: #141721 !important; border-color: #1f2536 !important; color: #4b5563 !important; box-shadow: none !important; cursor: not-allowed; }
+        .icon-btn { background: #111522; border: 1px solid #20293d; width: 40px; height: 40px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #ffbb00; font-weight: bold; }
+        .icon-btn.active { background: #ffbb00; color: #000; box-shadow: 0 0 10px rgba(255,187,0,0.4); }
+
+        .win-glow-bar { border-color: rgba(0, 255, 136, 0.4) !important; background: rgba(0, 255, 136, 0.05) !important; }
+        .win-glow-bar #win-text-msg { color: #00ff88 !important; }
+        .lose-glow-bar { border-color: rgba(255, 51, 102, 0.4) !important; background: rgba(255, 51, 102, 0.05) !important; }
+        .lose-glow-bar #win-text-msg { color: #ff3366 !important; }
+    </style>
+</head>
+<body>
+
+    <div class="header" style="display:none !important;">
+        <div class="balance-box">৳ <span id="user-balance">0.00</span></div>
+    </div>
+
+    <!-- 🏟️ ওরিজিনাল ৫-রিল স্লট মেশিন ক্যানভাস Wrapper -->
+    <div class="slot-machine-wrapper">
+        <div class="reels-grid-container">
+            <div class="payline-center-laser-line"></div>
+            <div class="reel-column-node" id="reel-0"><div class="symbol-img-frame" id="sym-frame-0"><img src="CROWN.png" alt="Crown"></div></div>
+            <div class="reel-column-node" id="reel-1"><div class="symbol-img-frame" id="sym-frame-1"><img src="CROWN.png" alt="Crown"></div></div>
+            <div class="reel-column-node" id="reel-2"><div class="symbol-img-frame" id="sym-frame-2"><img src="CROWN.png" alt="Crown"></div></div>
+            <div class="reel-column-node" id="reel-3"><div class="symbol-img-frame" id="sym-frame-3"><img src="CROWN.png" alt="Crown"></div></div>
+            <div class="reel-column-node" id="reel-4"><div class="symbol-img-frame" id="sym-frame-4"><img src="CROWN.png" alt="Crown"></div></div>
+        </div>
+    </div>
+
+    <!-- 📢 উইন-লস লাইভ ক্যাসিনো মেসেজ বার -->
+    <div class="win-status-container" id="win-status-box">
+        <span id="win-text-msg">बेट সিলেক্ট করে SPIN বোтам চাপুন ভাই, ওপেন সেসামি ট্রেজার অন ফায়ার!</span>
+    </div>
+
+    <!-- 🎛️ অ্যাকশন কন্ট্রোল প্যানেল ফুটার বার -->
+    <div class="footer-controls">
+        <div class="play-section">
+            <button class="bet-btn-nav" onclick="adjustBet('minus')">-</button>
+            <div style="text-align: center; width: 65px;">
+                <div style="font-size: 9px; color: #aaa; font-weight: bold;">BET</div>
+                <div style="font-size: 15px; font-weight: 900; color: #fff;" id="bet-display">৳৫০</div>
+            </div>
+            <button class="bet-btn-nav" onclick="adjustBet('plus')">+</button>
+
+            <button class="play-btn" id="spin-btn" onclick="handleAlibabaSpinRoll()">SPIN</button>
+            
+            <div class="icon-group">
+                <button class="icon-btn" id="auto-btn" onclick="toggleAuto()">🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlUserId = urlParams.get('userId') || urlParams.get('id') || urlParams.get('username') || "guest_user";
+        const urlWallet = urlParams.get('wallet') || "main";
+        const SERVER_URL = window.location.origin;
+
+        let balance = 0.00;
+        let currentBet = 50;
+        let isSpinning = false;
+        let isAuto = false;
+        let autoInterval = null;
+
+        // গিটহাব রুট ডিরেক্টরিতে থাকা ওরিজিনাল আলিবাবা ৫-রিল রেসিং আইকন ম্যাপ
+        const symbolImagesMap = {
+            "CROWN": "CROWN.png",
+            "TREASURE": "TREASURE.png",
+            "SWORD": "SWORD.png",
+            "COIN": "COIN.png",
+            "BAR": "BAR.png"
+        };
+
+        function adjustBet(action) {
+            if (isSpinning) return;
+            if (action === 'minus' && currentBet > 50) currentBet -= 50;
+            if (action === 'plus' && currentBet < 20000) currentBet += 50;
+            document.getElementById("bet-display").innerText = `৳${currentBet}`;
+            playAudio('click');
+        }
+
+        // 🎰 [🎰 ৫-রিল হাই-স্পিড ক্যাসিনো শাফলিং ও স্পিনিং অ্যানিমেশন ইঞ্জিন]
+        function animateAlibabaReelsSpinning(serverGameData) {
+            playAudio('spin');
+            let matrixResult = serverGameData.finalReelsResultMatrix || (serverGameData.gameData ? serverGameData.gameData.finalReelsResultMatrix : null);
+            if (!matrixResult || !Array.isArray(matrixResult)) {
+                matrixResult = ["CROWN", "CROWN", "CROWN", "CROWN", "CROWN"];
+            }
+
+            // ৫টি রিল একসাথে হাই-স্পিড স্পিন ব্লার মোড ফায়ার
+            for (let i = 0; i < 5; i++) {
+                const frame = document.getElementById(`sym-frame-${i}`);
+                if (frame) frame.className = "symbol-img-frame reel-spinning-blur";
+            }
+
+            //  থেকে ডানে ক্রমান্বয়ে ৫টি রিল স্টপ বাউন্সার লক
+            let reelIndex = 0;
+            let stopInterval = setInterval(() => {
+                if (reelIndex < 5) {
+                    const frame = document.getElementById(`sym-frame-${reelIndex}`);
+                    if (frame) {
+                        frame.className = "symbol-img-frame";
+                        let targetSymbolName = matrixResult[reelIndex];
+                        let imageFileName = symbolImagesMap[targetSymbolName] || "CROWN.png";
+                        frame.innerHTML = `<img src="${imageFileName}" alt="${targetSymbolName}">`;
+                        
+                        // ৩ডি ইমপ্যাক্ট পপিং স্কেল
+                        frame.style.transform = "scale(0.8)";
+                        setTimeout(() => { if(frame) frame.style.transform = "scale(1)"; }, 60);
+                    }
+                    playAudio('click');
+                    reelIndex++;
+                } else {
+                    clearInterval(stopInterval);
+                    if (serverGameData.balance !== undefined) balance = parseFloat(serverGameData.balance);
+                    showFinalAlibabaReward(serverGameData.status, serverGameData.winMultiplier, serverGameData.winAmount);
+                }
+            }, 350); // ৩৫০ মিলি-সেকেন্ডের লাক্সারি রিল ক্লিফিং এলাইনমেন্ট লক
+        }
+
+        async function handleAlibabaSpinRoll() {
+            // 🔒 [🔒 ডাবল-ক্লিক ব্লকার ও পিૂર ব্যালেন্স কাটার বর্ম]: বাজি ধরার সাথে সাথেই বোতাম ডিজেবল!
+            if (isSpinning || isSpinning === true) return; 
+            isSpinning = true;
+            
+            const spinBtn = document.getElementById("spin-btn");
+            if (spinBtn) spinBtn.disabled = true; 
+
+            document.getElementById("win-status-box").className = "win-status-container";
+            document.getElementById("win-text-msg").innerText = "🎰 ৫-রিল আলিবাবা স্পিন শাফলিং করা হচ্ছে... ধনরত্ন পে-লাইন ম্যাচিংয়ের অপেক্ষা ওস্তাদ...";
+            playAudio('click');
+
+            try {
+                const response = await fetch(`${SERVER_URL}/api/alibaba-spin`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ userId: urlUserId, amount: parseFloat(currentBet), wallet: urlWallet })
+                });
+
+                const serverRes = await response.json();
+                
+                if (serverRes.success || serverRes.success === true) {
+                    let targetGamePayload = serverRes.gameData || serverRes;
+                    animateAlibabaReelsSpinning(targetGamePayload);
+                } else {
+                    alert(serverRes.message || "❌ আপনার অ্যাকাউন্ট ব্যালেন্স জিরো বা অপ্রতুল! দয়া করে রিচার্জ করুন ওস্তাদ।");
+                    stopAlibabaState();
+                }
+            } catch (err) {
+                stopAlibabaState();
+            }
+        }
+
+        function showFinalAlibabaReward(status, winMultiplier, winAmount) {
+            const msgBox = document.getElementById("win-status-box");
+            const textMsg = document.getElementById("win-text-msg");
+            
+            if (status === "win" && winAmount > 0) {
+                playAudio('win');
+                if (msgBox) msgBox.className = "win-status-container win-glow-bar";
+                if (winMultiplier >= 25) {
+                    textMsg.innerHTML = `🔥 <b>সুপার মেগা জ্যাকপোট ওস্তাদ!</b> ৫টি রাজমুকুট মিলে <b>${winMultiplier}X</b> ওッズ ফায়ার! ওয়ালেটে ৳${winAmount} ক্রেডিট লক ভাই ভাই!`;
+                } else {
+                    textMsg.innerHTML = `🎉 <b>বিগ উইন ওস্তাদ!</b> পে-লাইন কম্বিনেশন মিলে ওয়ালেটে ৳${winAmount} ক্রেডিট সফলভাবে যোগ হয়েছে ভাই ভাই!`;
+                }
+            } else {
+                playAudio('wheel');
+                if (msgBox) msgBox.className = "win-status-container lose-glow-bar";
+                textMsg.innerHTML = `💥 ওহ হো লস ওস্তাদ! পে-লাইন কম্বিনেশন মিস হয়েছে। আবার অন ফায়ার স্পিন মারুন ভাই ভাই!`;
+            }
+
+            if (window.parent) window.parent.postMessage({ action: "refresh_wallet" }, "*");
+            stopAlibabaState();
+
+            if (isAuto) {
+                autoInterval = setTimeout(() => {
+                    if (isAuto) handleAlibabaSpinRoll();
+                }, 3800);
+            }
+        }
+
+        if (typeof io !== 'undefined') {
+            const socket = io();
+            socket.on("balanceUpdate", (data) => {
+                if (data && data.username === urlUserId) {
+                    if (window.parent) window.parent.postMessage({ action: "refresh_wallet" }, "*");
+                }
+            });
+        }
+
+        function toggleAuto() {
+            isAuto = !isAuto;
+            const autoEl = document.getElementById("auto-btn");
+            if (autoEl) autoEl.classList.toggle('active', isAuto);
+            if (isAuto && !isSpinning) handleAlibabaSpinRoll();
+            playAudio('click');
+        }
+
+        function stopAlibabaState() {
+            isSpinning = false;
+            const spinBtn = document.getElementById("spin-btn");
+            if (spinBtn) spinBtn.disabled = false; 
+            if (!isAuto && autoInterval) clearTimeout(autoInterval);
+        }
+
+        const slotSounds = {
+            click: new Audio('spin2.mp3'),
+            spin: new Audio('spin2.mp3'),
+            win: new Audio('win2.mp3'),
+            wheel: new Audio('spin2.mp3')
+        };
+        Object.values(slotSounds).forEach(s => s.load());
+
+        function playAudio(type) {
+            try { if(slotSounds[type]) { slotSounds[type].currentTime = 0; slotSounds[type].play().catch(e => {}); } } catch(e) {}
+        }
+    </script>
+</body>
+</html>
 
